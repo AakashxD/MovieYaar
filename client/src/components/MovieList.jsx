@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 import API_URL from '../../utils/apikey';
+import { Link } from 'react-router-dom';
 const MovieList = () => {
   const [list, setList] = useState([]);
   useEffect(() => {

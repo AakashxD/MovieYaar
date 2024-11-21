@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import MovieList from './components/MovieList'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import MovieDetails from "./pages/MovieDetails"
 function App() {
   return (
    <>
@@ -13,9 +14,10 @@ function App() {
   <Route path='/login' element={<Login/>}  />
   <Route path='/signup' element={<Signup/>}  />
   <Route path='/movies' element={<MovieList/>}  />
+  <Route path='details' element={<MovieDetails/>}/>
  </Routes>
    </>
   )
 }
-// https://api.themoviedb.org/3/movie/now_playing?api_key=YOUR_API_KEY&language=en-US&page=1
+
 export default App
