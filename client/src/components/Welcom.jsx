@@ -11,9 +11,8 @@ function Welcome() {
     "https://image.tmdb.org/t/p/w1280/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
     "https://image.tmdb.org/t/p/w1280/7fR3KxswtY8OHHZuOUB9td58CRX.jpg"
   ];
-
   return (
-    <ImagesSlider className="h-[39rem] w-full" images={images}>
+    <ImagesSlider className="h-[40rem] w-full" images={images}>
       <motion.div
         initial={{ opacity: 0, y: -80 }}
         animate={{ opacity: 1, y: 0 }}
