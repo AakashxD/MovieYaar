@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 function Welcome() {
   const images = [
     "https://image.tmdb.org/t/p/w1280/aosm8NMQ3UyoBVpSxyimorCQykC.jpg",
-    "https://image.tmdb.org/t/p/w1280/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
     "https://image.tmdb.org/t/p/w1280/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
-    "https://image.tmdb.org/t/p/w1280/7fR3KxswtY8OHHZuOUB9td58CRX.jpg"
+    "https://image.tmdb.org/t/p/w1280/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg"
+    
   ];
   return (
     <ImagesSlider className="h-[40rem] w-full" images={images}>

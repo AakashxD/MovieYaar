@@ -6,7 +6,11 @@ const Home = () => {
   return (
    <>
     <Navbar/>
-    <Welcom/>
+   <div >
+     
+   <Welcom/>
+   </div>
+   <MovieList/>
    </>
   )
 }

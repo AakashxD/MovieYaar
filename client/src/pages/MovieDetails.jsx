@@ -10,6 +10,7 @@ const DetailsPage = () => {
   const summary = searchParams.get("summary") || "No summary available.";
 
   const showtimes = [
+    
     { time: "10:00 AM", color: "bg-green-100 text-green-800" },
     { time: "1:00 PM", color: "bg-blue-100 text-blue-800" },
     { time: "6:00 PM", color: "bg-purple-100 text-purple-800" },
