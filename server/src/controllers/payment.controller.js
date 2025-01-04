@@ -10,8 +10,9 @@ const razorpay = new Razorpay({
 
 // Payment controller
 const paymentController = async (req, res) => {
-    const { amount } = req.body; // Amount in smallest currency unit (e.g., 5000 paise = INR 50.00)
 
+    const { amount } = req.body; // Amount in smallest currency unit (e.g., 5000 paise = INR 50.00)
+    console.log("ammount" , amount)
     const options = {
         amount: amount, // amount in smallest currency unit
         currency: "INR",
@@ -22,6 +23,7 @@ const paymentController = async (req, res) => {
     try {
         const order = await razorpay.orders.create(options);
         res.json(order);
+        console.log("order" , order)
     } catch (error) {
         console.error("Error creating order:", error);
         res.status(500).send({

@@ -1,13 +1,44 @@
 
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const cors = require("cors");
+// const app=express();
+// const {PORT}=require('./config/server.config');
+// const connectDB=require('./config/config.db')
+// app.use(cors());
+// app.use(express.json());
+
+// app.use('/api/users', require('./src/Router/routes'));
+// app.listen(PORT,()=>{
+//    connectDB();
+// })
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const app=express();
-const {PORT}=require('./config/server.config');
-const connectDB=require('./config/config.db')
+const { PORT } = require("./config/server.config");
+const connectDB = require("./config/config.db");
+
+const app = express();
+
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-app.listen(PORT,()=>{
-   connectDB();
-})
+// Routes
+app.use("/api/user", require("../src/routes/auth.route"));
+
+// Start server and connect to database
+const startServer = async () => {
+  try {
+    await connectDB(); // Ensures the database connection is established before starting the server
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error("Failed to connect to the database:", err.message);
+    process.exit(1); // Exit process with failure code
+  }
+};
+
+startServer();

@@ -9,9 +9,9 @@ router.post('/signup',signupValidation,(req,res)=>{
     res.send('signup success')
 })
 router.post('/payment',paymentController,(req,res)=>{
-    res.send('signup success')
+    res.send('payment in process')
 })
 router.post('/verify',verifypaymentcontroller,(req,res)=>{
-    res.send('signup success')
+    res.send('payment succesfull')
 })
 module.exports=router;
