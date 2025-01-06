@@ -6,6 +6,7 @@ import MovieList from './components/MovieList'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import MovieDetails from "./pages/MovieDetails"
+import 'react-toastify/ReactToastify.css';
 function App() {
   return (
    <>

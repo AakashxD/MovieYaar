@@ -1,24 +1,10 @@
 
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const cors = require("cors");
-// const app=express();
-// const {PORT}=require('./config/server.config');
-// const connectDB=require('./config/config.db')
-// app.use(cors());
-// app.use(express.json());
-
-// app.use('/api/users', require('./src/Router/routes'));
-// app.listen(PORT,()=>{
-//    connectDB();
-// })
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const { PORT } = require("./config/server.config");
 const connectDB = require("./config/config.db");
-
+const router=require('./routes/auth.route')
 const app = express();
 
 // Middleware
@@ -26,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use("/api/auth",router);
 app.use("/api/user", require("../src/routes/auth.route"));
 
 // Start server and connect to database
