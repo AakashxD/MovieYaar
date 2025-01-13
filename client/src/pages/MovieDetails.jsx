@@ -4,8 +4,6 @@ import { useSearchParams, Link } from "react-router-dom";
 import { Clock } from "lucide-react";
 const SeatSelection = ({ showtime, movieDetails, preBookedSeats = [] }) => {
   const [selectedSeats, setSelectedSeats] = useState([]);
-  const [confirmedSeats, setConfirmedSeats] = useState([]);
-  const [isBooked, setIsBooked] = useState(false);
   const [bookedSeats, setBookedSeats] = useState(preBookedSeats);
 
   const handleSeatClick = (seat) => {
